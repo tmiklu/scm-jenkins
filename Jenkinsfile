@@ -3,7 +3,7 @@ node {
     
     sh 'printenv | sort'
     
-    echo "Current user id is ${env.BUILD_ID} (type: ${env.USER_ID.class})"
+    echo "Current user id is ${env.BUILD_ID} (type: ${env.USER_ID.class}"
     
     echo "${env.SHELL}"
     
