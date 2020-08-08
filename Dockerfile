@@ -4,4 +4,6 @@ LABEL maintainer="tmiklu"
 
 HEALTHCHECK --interval=5m \
             --timeout=3s \
-            CMD curl -f http://localhost || exit 1
+            CMD curl -f http://localhost:8080 || exit 1
+        
+ EXPOSE 8080
