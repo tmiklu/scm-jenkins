@@ -1,15 +1,12 @@
-#!/usr/bin/env groovy 
-
 pipeline {
-  agent none
-  
-  stages {
-  
-    stage('test') {
-    
-      steps {
-        echo 'test stage...'
-      }
+    agent {
+        docker { image 'node:14-alpine' }
     }
-  }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
