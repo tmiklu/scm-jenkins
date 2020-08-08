@@ -10,7 +10,7 @@ node {
     
     echo "${env.SHELL}"
     
-    sh '$USER_NAME'
+    echo "${env.USER_NAME}"
     sh '$USER_ID'
     
     def customImage = docker.build("my-nginx:${env.BUILD_ID}")
