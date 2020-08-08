@@ -3,7 +3,7 @@ node {
     
     sh 'printenv | sort'
     
-    println ("${env.SHELL}")
+    echo "${env.SHELL}"
     
     def customImage = docker.build("my-nginx:${env.BUILD_ID}")
 
