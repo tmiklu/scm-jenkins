@@ -3,10 +3,7 @@ node {
     
     sh 'printenv | sort'
     
-    environment {
-        USER_NAME = "Tomas"
-        USER_ID = 33
-    }
+    echo "Current user id is ${env.BUILD_ID} (type: ${env.USER_ID.class})"
     
     echo "${env.SHELL}"
     
